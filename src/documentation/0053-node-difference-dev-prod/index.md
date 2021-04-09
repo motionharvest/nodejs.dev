@@ -44,7 +44,7 @@ if (process.env.NODE_ENV === "production") {
 }
 if(['production', 'staging'].indexOf(process.env.NODE_ENV) >= 0) {
   //...
-})
+}
 ```
 
 For example, in an Express app, you can use this to set different error handlers per environment:
@@ -52,9 +52,9 @@ For example, in an Express app, you can use this to set different error handlers
 ```js
 if (process.env.NODE_ENV === "development") {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }))
-})
+}
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.errorHandler())
-})
+}
 ```
